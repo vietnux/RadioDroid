@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="net.programmierecke.radiodroid2">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    package="net.radio.streaming">
 
-    <uses-feature android:name="android.hardware.touchscreen"
-        android:required="false" />
-    <uses-feature android:name="android.software.leanback"
-        android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.software.leanback" android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -20,6 +17,8 @@
 
     <uses-sdk tools:overrideLibrary="androidx.tvprovider"/>
 
+<!--    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>-->
+
     <application
         android:banner="@mipmap/ic_banner"
         android:name=".RadioDroidApp"
@@ -31,7 +30,7 @@
         android:requestLegacyExternalStorage="true"
         android:networkSecurityConfig="@xml/network_security_config">
         <provider
-            android:authorities="net.programmierecke.radiodroid2.fileprovider"
+            android:authorities="net.radio.streaming.fileprovider"
             android:name="androidx.core.content.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -57,7 +56,7 @@
             <!--</intent-filter>-->
         </activity>
         <service
-            android:name="net.programmierecke.radiodroid2.service.PlayerService"
+            android:name="net.radio.streaming.service.PlayerService"
             android:permission="android.permission.BIND_JOB_SERVICE">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
@@ -65,7 +64,7 @@
         </service>
 
 <!--        <service-->
-<!--            android:name="net.programmierecke.radiodroid2.service.RadioDroidBrowserService"-->
+<!--            android:name="net.radio.streaming.service.Radio StreamingBrowserService"-->
 <!--            android:exported="true"-->
 <!--            tools:ignore="ExportedService">-->
 <!--            <intent-filter>-->
@@ -74,7 +73,7 @@
 <!--        </service>-->
 
         <receiver
-            android:name="net.programmierecke.radiodroid2.alarm.AlarmReceiver"
+            android:name="net.radio.streaming.alarm.AlarmReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name=".AlarmReceiver" />
@@ -88,7 +87,7 @@
         </receiver>
 
         <receiver
-            android:name="net.programmierecke.radiodroid2.BootReceiver"
+            android:name="net.radio.streaming.BootReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -102,6 +101,8 @@
         <!--<meta-data-->
             <!--android:name="com.google.android.gms.car.notification.SmallIcon"-->
             <!--android:resource="@mipmap/ic_launcher" />-->
-
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1656614863517753~3066371608"/>
     </application>
 </manifest>

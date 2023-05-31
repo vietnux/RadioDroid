@@ -20,6 +20,7 @@
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
                 android:measureAllChildren="true">
 
             <ImageView
@@ -41,7 +42,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginStart="5dp"
-                    android:tint="?android:attr/windowBackground"
+                    app:tint="?android:attr/windowBackground"
                     app:srcCompat="@drawable/ic_transparent_circle"
                     android:visibility="gone"
                     android:contentDescription="@null" />
@@ -82,6 +83,7 @@
                     android:ellipsize="end"
                     android:lines="1"
                     android:scrollbars="none"
+                    android:text="Text ở đây"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <TextView
@@ -116,7 +118,7 @@
                 android:minWidth="50dp"
                 android:padding="5dp"
                 android:tint="?attr/iconsInItemBackgroundColor"
-                app:srcCompat="@drawable/ic_expand_more_black_24dp" />
+                app:srcCompat="@drawable/ic_expand_more_white_24dp" />
     </LinearLayout>
 
     <ViewStub
@@ -132,5 +134,11 @@
             android:clickable="true"
             android:descendantFocusability="blocksDescendants"
             android:orientation="vertical"/>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layoutAds"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal" />-->
 
 </LinearLayout>

@@ -1,0 +1,32 @@
+{
+    "data":{"banner":"admob", "interstitial": "admob", "native":"admob", 
+	"begin":1,"category":1,"native_about":1,"viewtips":1,"alarm":1,"end":0,
+        "ad_units" :{
+            "ios" : {
+                "banner":"",
+                "interstitial":"",
+                "nativeAd":"",
+		"native_banner":""
+            },
+            "android" : {
+                "banner":"",
+                "interstitial":"",
+                "nativeAd":"",
+		"native_banner":""
+            }
+        },
+        "admobid": {
+            "android": {
+                "banner": "",
+                "interstitial": "ca-app-pub-1656614863517753/9248636572",
+                "rewardvideo": "",
+				"native":"ca-app-pub-1656614863517753/9064163115"	
+            },
+            "ios" : {
+                "banner": "",
+                "interstitial": "",
+                "rewardvideo": ""
+            }
+        }
+    }
+}

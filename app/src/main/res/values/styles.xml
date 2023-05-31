@@ -1,10 +1,9 @@
 <resources>
 
-    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
-    </style>
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base"></style>
 
-    <style name="MyMaterialTheme.Dark" parent="MyMaterialTheme.Base.Dark">
-    </style>
+    <style name="MyMaterialTheme.Dark" parent="MyMaterialTheme.Base.Dark"></style>
+    <style name="MyMaterialTheme.Nomal" parent="MyMaterialTheme.Base.Nomal"></style>
 
     <style name="MyMaterialTheme.Base" parent="Theme.MaterialComponents.Light">
         <item name="windowNoTitle">true</item>
@@ -99,6 +98,54 @@
         <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
     </style>
 
+    <style name="MyMaterialTheme.Base.Nomal" parent="Theme.MaterialComponents">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="dialogTheme">@style/DialogTheme.Dark</item>
+        <item name="alertDialogTheme">@style/AlertTheme.Dark</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme.Dark</item>
+        <item name="android:windowBackground">@color/itemStation</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/mpm_white</item>
+
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+
+        <item name="colorPlayerBackground">@color/colorPlayerBackgroundDark</item>
+        <item name="colorPlayerShadow">@color/colorPlayerShadowDark</item>
+
+        <item name="tagBackgroundColor">@color/tagBackgroundColorDark</item>
+
+        <item name="menuTextColorSelected">@color/itemSelect</item>
+        <item name="menuTextColorDefault">@color/menuTextColorDefaultDark</item>
+        <item name="android:itemTextAppearance">@style/MenuTextAppearance</item>
+
+        <item name="menuBottomTextColorSelected">@color/menuBottomTextColorSelectedDark</item>
+        <item name="menuBottomTextColorDefault">@color/menuBottomTextColorDefaultDark</item>
+        <item name="menuBottomBackgroundColor">@color/menuBottomBackgroundColorDark</item>
+
+        <item name="swipeDeleteIconColor">@color/swipeDeleteIconColorDark</item>
+        <item name="swipeDeleteBackgroundColor">@color/swipeDeleteBackgroundColorDark</item>
+
+        <item name="colorTabUnderline">@color/colorTabUnderlineDark</item>
+
+        <item name="android:itemBackground">@color/windowBackgroundDark</item>
+        <item name="iconsInItemBackgroundColor">@color/iconsInItemBackgroundColorDark</item>
+
+        <item name="met_baseColor">?android:textColorPrimary</item>
+        <item name="met_textColorHint">?android:textColorHint</item>
+        <item name="met_primaryColor">?android:colorPrimaryDark</item>
+
+        <item name="snackbarButtonStyle">@style/SnackBarButtonDark</item>
+
+        <!-- workaround for lower API -->
+        <item name="colorAccentMy">@color/colorAccentDark</item>
+
+        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
+    </style>
+
+
     <style name="IconButton" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:minHeight">48dip</item>
         <item name="android:minWidth">48dip</item>
@@ -113,12 +160,18 @@
     <style name="DialogTheme.Dark" parent="Theme.MaterialComponents.Dialog">
         <item name="android:windowBackground">@color/windowBackgroundDark</item>
     </style>
+    <style name="DialogTheme.Nomal" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@color/windowBackgroundDark</item>
+    </style>
 
     <style name="AlertTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:windowBackground">@color/windowBackground</item>
     </style>
 
     <style name="AlertTheme.Dark" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@color/windowBackgroundDark</item>
+    </style>
+    <style name="AlertTheme.Nomal" parent="Theme.AppCompat.Dialog.Alert">
         <item name="android:windowBackground">@color/windowBackgroundDark</item>
     </style>
 

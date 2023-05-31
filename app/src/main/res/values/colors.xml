@@ -2,12 +2,12 @@
 <resources>
     <color name="windowBackground">#ffffff</color>
     <color name="windowBackgroundDark">#2c2c2e</color>
-    <color name="colorPrimary">#125688</color>
+    <color name="colorPrimary">#0a3665</color>
     <color name="colorPrimaryDark">#232325</color>
     <color name="textColorPrimary">#FFFFFF</color>
     <color name="navigationBarColor">#000000</color>
-    <color name="colorAccent">#1d6293</color>
-    <color name="colorAccentDark">#1d6293</color>
+    <color name="colorAccent">#0a3665</color>
+    <color name="colorAccentDark">#0a3665</color>
     <color name="colorTabUnderline">#e0347f</color>
     <color name="colorTabUnderlineDark">@color/colorAccentDark</color>
     <color name="colorStationSwipeBackground">#ff4081</color>
@@ -17,6 +17,7 @@
     <color name="colorPlayerShadow">#e5e5e5</color>
     <color name="colorPlayerShadowDark">#000000</color>
 
+    <color name="textColorFirst">#fcfbfc</color>
     <color name="textColorSecondary">#777</color>
     <color name="tagBackgroundColor">#E0E0E0</color>
     <color name="tagBackgroundColorDark">#212121</color>
@@ -47,4 +48,6 @@
 
     <color name="snackBarButtonColor">#D500F9</color>
     <color name="snackBarButtonColorDark">@color/snackBarButtonColor</color>
+    <color name="itemStation">#222433</color>
+    <color name="itemSelect">#f4b02e</color>
 </resources>
