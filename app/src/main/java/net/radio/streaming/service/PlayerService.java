@@ -461,7 +461,7 @@ public class PlayerService extends JobIntentService implements RadioPlayer.Playe
         mediaSession.setCallback(mediaSessionCallback);
 
         Intent startActivityIntent = new Intent(itsContext.getApplicationContext(), ActivityMain.class);
-        mediaSession.setSessionActivity(PendingIntent.getActivity(itsContext.getApplicationContext(), 0, startActivityIntent, PendingIntent.FLAG_UPDATE_CURRENT));
+        mediaSession.setSessionActivity(PendingIntent.getActivity(itsContext.getApplicationContext(), 0, startActivityIntent, PendingIntent.FLAG_IMMUTABLE));
 
         mediaSession.setFlags(MediaSessionCompat.FLAG_HANDLES_MEDIA_BUTTONS | MediaSessionCompat.FLAG_HANDLES_TRANSPORT_CONTROLS);
 
@@ -896,15 +896,15 @@ public class PlayerService extends JobIntentService implements RadioPlayer.Playe
 
         Intent stopIntent = new Intent(itsContext, PlayerService.class);
         stopIntent.setAction(ACTION_STOP);
-        PendingIntent pendingIntentStop = PendingIntent.getService(itsContext, 0, stopIntent, 0);
+        PendingIntent pendingIntentStop = PendingIntent.getService(itsContext, 0, stopIntent, PendingIntent.FLAG_IMMUTABLE);
 
         Intent nextIntent = new Intent(itsContext, PlayerService.class);
         nextIntent.setAction(ACTION_SKIP_TO_NEXT);
-        PendingIntent pendingIntentNext = PendingIntent.getService(itsContext, 0, nextIntent, 0);
+        PendingIntent pendingIntentNext = PendingIntent.getService(itsContext, 0, nextIntent, PendingIntent.FLAG_IMMUTABLE);
 
         Intent previousIntent = new Intent(itsContext, PlayerService.class);
         previousIntent.setAction(ACTION_SKIP_TO_PREVIOUS);
-        PendingIntent pendingIntentPrevious = PendingIntent.getService(itsContext, 0, previousIntent, 0);
+        PendingIntent pendingIntentPrevious = PendingIntent.getService(itsContext, 0, previousIntent, PendingIntent.FLAG_IMMUTABLE);
 
         PlayState currentPlayerState = radioPlayer.getPlayState();
 
@@ -919,7 +919,7 @@ public class PlayerService extends JobIntentService implements RadioPlayer.Playe
             }
         }
 
-        PendingIntent contentIntent = PendingIntent.getActivity(itsContext, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent contentIntent = PendingIntent.getActivity(itsContext, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(itsContext, NOTIFICATION_CHANNEL_ID)
                 .setContentIntent(contentIntent)
                 .setContentTitle(theTitle)
@@ -935,7 +935,7 @@ public class PlayerService extends JobIntentService implements RadioPlayer.Playe
         if (currentPlayerState == PlayState.Playing || currentPlayerState == PlayState.PrePlaying) {
             Intent pauseIntent = new Intent(itsContext, PlayerService.class);
             pauseIntent.setAction(ACTION_PAUSE);
-            PendingIntent pendingIntentPause = PendingIntent.getService(itsContext, 0, pauseIntent, 0);
+            PendingIntent pendingIntentPause = PendingIntent.getService(itsContext, 0, pauseIntent, PendingIntent.FLAG_IMMUTABLE);
 
             notificationBuilder.addAction(R.drawable.ic_pause_white_24dp, getString(R.string.action_pause), pendingIntentPause);
             notificationBuilder.setUsesChronometer(true)
@@ -943,7 +943,7 @@ public class PlayerService extends JobIntentService implements RadioPlayer.Playe
         } else if (currentPlayerState == PlayState.Paused || currentPlayerState == PlayState.Idle) {
             Intent resumeIntent = new Intent(itsContext, PlayerService.class);
             resumeIntent.setAction(ACTION_RESUME);
-            PendingIntent pendingIntentResume = PendingIntent.getService(itsContext, 0, resumeIntent, 0);
+            PendingIntent pendingIntentResume = PendingIntent.getService(itsContext, 0, resumeIntent, PendingIntent.FLAG_IMMUTABLE);
 
             notificationBuilder.addAction(R.drawable.ic_play_arrow_white_24dp, getString(R.string.action_resume), pendingIntentResume);
             notificationBuilder.setUsesChronometer(false)
