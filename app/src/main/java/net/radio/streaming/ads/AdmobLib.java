@@ -25,7 +25,8 @@ import com.google.android.gms.ads.RequestConfiguration;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.google.android.gms.ads.appopen.AppOpenAd;
-import com.google.android.gms.ads.formats.NativeAdOptions;
+//import com.google.android.gms.ads.formats.NativeAdOptions;
+import com.google.android.gms.ads.nativead.NativeAdOptions;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
@@ -94,6 +95,8 @@ public class AdmobLib implements Application.ActivityLifecycleCallbacks {
             if( pDl != null ) pDl.dismiss();
             if( activity.getClass().getSimpleName().equals("SplashScreen")) {
                 Intent intent = new Intent(activity, ActivityMain.class);
+                // Đặt các flags để xóa activity hiện tại khỏi stack
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 activity.startActivity(intent);
             }
             return;
@@ -135,6 +138,8 @@ public class AdmobLib implements Application.ActivityLifecycleCallbacks {
                     }
                     if( activity.getClass().getSimpleName().equals("SplashScreen")) {
                         Intent intent = new Intent(activity, ActivityMain.class);
+                        // Đặt các flags để xóa activity hiện tại khỏi stack
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         activity.startActivity(intent);
                     }
                     if (DEBUG) Log.e(TAG, "The interstitial onAdFailedToLoad error. "+loadAdError.toString());
@@ -169,6 +174,8 @@ public class AdmobLib implements Application.ActivityLifecycleCallbacks {
 
                             if( activity.getClass().getSimpleName().equals("SplashScreen")) {
                                 Intent intent = new Intent(activity, ActivityMain.class);
+                                // Đặt các flags để xóa activity hiện tại khỏi stack
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 activity.startActivity(intent);
                             }
                         }
@@ -184,6 +191,8 @@ public class AdmobLib implements Application.ActivityLifecycleCallbacks {
 
                             if( activity.getClass().getSimpleName().equals("SplashScreen")) {
                                 Intent intent = new Intent(activity, ActivityMain.class);
+                                // Đặt các flags để xóa activity hiện tại khỏi stack
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 activity.startActivity(intent);
                             }
                         }
@@ -202,6 +211,8 @@ public class AdmobLib implements Application.ActivityLifecycleCallbacks {
 //            interstitial(true, null);
             if( activity.getClass().getSimpleName().equals("SplashScreen")) {
                 Intent intent = new Intent(activity, ActivityMain.class);
+                // Đặt các flags để xóa activity hiện tại khỏi stack
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 activity.startActivity(intent);
             }
         }
@@ -364,6 +375,8 @@ public class AdmobLib implements Application.ActivityLifecycleCallbacks {
             if (pDialog != null) pDialog.dismiss();
             if( activity.getClass().getSimpleName().equals("SplashScreen")) {
                 Intent intent = new Intent(activity, ActivityMain.class);
+                // Đặt các flags để xóa activity hiện tại khỏi stack
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 activity.startActivity(intent);
             }
             return;
@@ -395,10 +408,13 @@ public class AdmobLib implements Application.ActivityLifecycleCallbacks {
                      */
                     @Override
                     public void onAdFailedToLoad(LoadAdError loadAdError) {
+//                        Log.e(TAG, " onAdLoaded() = " + loadAdError.toString() );
                         // Handle the error.
                         pDialog.dismiss();
                         if( activity.getClass().getSimpleName().equals("SplashScreen")) {
                             Intent intent = new Intent(activity, ActivityMain.class);
+                            // Đặt các flags để xóa activity hiện tại khỏi stack
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             activity.startActivity(intent);
                         }
                     }

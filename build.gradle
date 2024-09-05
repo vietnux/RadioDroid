@@ -3,11 +3,14 @@ buildscript {
     repositories {
         mavenCentral()
         google()
+        maven { url 'https://jitpack.io' }
         jcenter()
+        gradlePluginPortal()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.2'
+        classpath 'com.android.tools.build:gradle:8.5.2'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10'
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:1.8.10" // Thay đổi phiên bản nếu cần thiết
     }
 }
 

@@ -1,6 +1,6 @@
 {
     "data":{"banner":"admob", "interstitial": "admob", "native":"admob", 
-	"begin":1,"category":1,"native_about":1,"viewtips":1,"alarm":1,"end":0,
+	"begin":1,"openapp":1,"category":1,"native_about":1,"viewtips":1,"alarm":1,"end":0,
         "ad_units" :{
             "ios" : {
                 "banner":"",
@@ -20,7 +20,8 @@
                 "banner": "",
                 "interstitial": "ca-app-pub-1656614863517753/9248636572",
                 "rewardvideo": "",
-				"native":"ca-app-pub-1656614863517753/9064163115"	
+				"native":"ca-app-pub-1656614863517753/9064163115",
+                "openapp": "ca-app-pub-1656614863517753/5141972114"
             },
             "ios" : {
                 "banner": "",

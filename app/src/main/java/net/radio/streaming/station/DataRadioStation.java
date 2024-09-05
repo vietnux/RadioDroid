@@ -130,6 +130,8 @@ public class DataRadioStation implements Parcelable {
 
 	public static List<DataRadioStation> DecodeJson(String result) {
 		List<DataRadioStation> aList = new ArrayList<DataRadioStation>();
+//		Log.e(TAG, "==" + result);
+
 		if (result != null) {
 			if (TextUtils.isGraphic(result)) {
 				try {

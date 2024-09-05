@@ -144,13 +144,13 @@ public class ActivityMain extends AppCompatActivity implements SearchView.OnQuer
 
         super.onCreate(savedInstanceState);
 
-        if( JsonParams.DATA == null ) {
-            try {
-                new RemoteJSONSource(this).execute("");
-            } catch ( Exception e ) {
-                Log.e(TAG, "Error ads..." + e.toString() );
-            }
-        }
+//        if( JsonParams.DATA == null ) {
+//            try {
+//                new RemoteJSONSource(this).execute("");
+//            } catch ( Exception e ) {
+//                Log.e(TAG, "Error ads..." + e.toString() );
+//            }
+//        }
 
         if (sharedPref == null) {
             PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
@@ -378,10 +378,12 @@ public class ActivityMain extends AppCompatActivity implements SearchView.OnQuer
 
         int backStackCount = mFragmentManager.getBackStackEntryCount();
         FragmentManager.BackStackEntry backStackEntry;
-
+        Log.e(TAG, "=="+backStackCount +" = "+Utils.bottomNavigationEnabled(this) );
         if (backStackCount > 0) {
+
             // FRAGMENT_FROM_BACKSTACK value added as a backstack name for non-root fragments like Recordings, About, etc
             backStackEntry = mFragmentManager.getBackStackEntryAt(mFragmentManager.getBackStackEntryCount() - 1);
+//            Log.e(TAG, backStackEntry.getName().toString() );
             if (backStackEntry.getName().equals("SearchPreferenceFragment")) {
                 super.onBackPressed();
                 return;
@@ -400,6 +402,7 @@ public class ActivityMain extends AppCompatActivity implements SearchView.OnQuer
             if (lastExitTry != null && new Date().getTime() < lastExitTry.getTime() + 3 * 1000) {
                 PlayerServiceUtil.shutdownService();
                 finish();
+                return;
             } else {
                 Toast.makeText(this, R.string.alert_press_back_to_exit, Toast.LENGTH_SHORT).show();
                 lastExitTry = new Date();

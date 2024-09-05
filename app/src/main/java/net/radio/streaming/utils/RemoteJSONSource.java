@@ -148,7 +148,10 @@ public class RemoteJSONSource extends AsyncTask<String, Long, String> {
 //            new FacebookAudienceAdsLibs( context ).adsInterstitial( pDialog );
 
             //admob ads
-            new AdmobLib( context ).interstitial( true, pDialog );
+            new AdmobLib(context).interstitial(true, pDialog);
+        } else if( JsonParams.getParamInt("openapp") == 1 ) {
+            AdmobLib.getInstance(context).fetchAd(pDialog);;
+//            AdmobLib.getInstance(context).showAdIfAvailable();
         } else {
             pDialog.dismiss();
         }

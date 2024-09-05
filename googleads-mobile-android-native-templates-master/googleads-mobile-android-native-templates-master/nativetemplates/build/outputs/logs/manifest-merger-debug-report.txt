@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml:1:1-7:12
+ADDED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml:1:1-7:12
+INJECTED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml:1:1-7:12
 	package
-		INJECTED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml:1:11-69
 application
-ADDED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml:2:3-4:17
+ADDED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml:2:3-4:17
 	android:supportsRtl
-		ADDED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml:2:16-42
+		ADDED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml:2:16-42
 uses-sdk
-INJECTED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml
-INJECTED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml
+INJECTED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/tuantt/AndroidStudioProjects/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/Full Stack/Android/RadioDroid/googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/src/main/AndroidManifest.xml

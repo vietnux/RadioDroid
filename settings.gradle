@@ -2,3 +2,5 @@ include ':app'
 include ':nativetemplates'
 project(':nativetemplates').projectDir = new File(rootDir, 'googleads-mobile-android-native-templates-master/googleads-mobile-android-native-templates-master/nativetemplates/')
 
+//include ':MaterialPopupMenu'
+//project(':MaterialPopupMenu').projectDir = new File(rootDir, 'MaterialPopupMenu/material-popup-menu/')
